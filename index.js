@@ -14,10 +14,11 @@ app.use(require('./routes/films.route'));
 app.use(require('./routes/janres.route'));
 app.use(require('./routes/tegs.route'));
 app.use(require('./routes/users.route'));
+app.use(require('./routes/request.route'));
 
 const start = async () => {
     try {
-        mongoose.connect(process.env.MONGOS);
+        await mongoose.connect(process.env.MONGOS);
         console.log('Base');
     } catch (error) {
         console.log('Base error');
