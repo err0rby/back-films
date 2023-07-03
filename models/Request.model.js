@@ -5,6 +5,7 @@ const requestSchema = mongoose.Schema({
     adress: String,
     number: String,
     work: String,
+    worker: String,
 });
 
 const Request = mongoose.model('Request', requestSchema);

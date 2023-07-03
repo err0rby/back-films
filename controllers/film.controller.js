@@ -12,7 +12,8 @@ module.exports.filmsController = {
                 actors,
                 discription,
                 year,
-                tegs
+                tegs,
+                workers
             });
             res.json(data)
         } catch (error) {
@@ -22,7 +23,7 @@ module.exports.filmsController = {
 
     allFilms: async (req, res) => {
         try {
-            const data = await Film.find().populate('actors tegs janres');
+            const data = await Film.find().populate('actors tegs janres workers');
             res.json(data);
         } catch (error) {
             res.json(error)

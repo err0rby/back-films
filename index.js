@@ -15,6 +15,7 @@ app.use(require('./routes/janres.route'));
 app.use(require('./routes/tegs.route'));
 app.use(require('./routes/users.route'));
 app.use(require('./routes/request.route'));
+app.use(require('./routes/worker.route'));
 
 const start = async () => {
     try {

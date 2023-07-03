@@ -3,12 +3,13 @@ const Request = require('../models/Request.model');
 module.exports.requestController = {
     addRequest: async (req, res) => {
         try {
-            const { name, number, adress, work } = req.body;
+            const { name, number, adress, work, worker } = req.body;
             const data = await Request.create({
                 name,
                 number,
                 adress,
                 work,
+                worker,
             });
             res.json(data);
         } catch (error) {

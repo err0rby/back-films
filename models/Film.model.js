@@ -1,10 +1,16 @@
 const mongoose = require('mongoose');
 
 const filmSchema = mongoose.Schema({
-    image:String,
+    image: String,
     name: String,
     year: String,
     discription: String,
+    workers: [
+        {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: 'Worker'
+        }
+    ],
     janres: [
         {
             type: mongoose.SchemaTypes.ObjectId,
